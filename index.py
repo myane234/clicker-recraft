@@ -1,14 +1,14 @@
 import pyautogui
 import time
 
-# === FIXED positions (jangan diubah) ===
+
 prompt_x = 124
 prompt_y = 334
 enter_x = 139
 enter_y = 643
 
 
-# === Ambil keyword dari file txt ===
+
 def load_keywords(filename):
     with open(filename, "r", encoding="utf-8") as f:
         return [line.strip() for line in f if line.strip()]
@@ -30,14 +30,14 @@ def setup_canvas():
     
     return canvas_x, canvas_y, offset_x
 
-# === Konfirmasi awal ===
+
 print("=== AUTO INPUT RECRAAFT (SKEMA BARU) ===")
 input("Pastikan Recraaft sudah terbuka penuh, lalu tekan Enter untuk mulai setup...")
 
 # === Setup posisi canvas ===
 canvas_x, canvas_y, offset_x = setup_canvas()
 
-# === Eksekusi keyword ===
+
 print("\nMulai input otomatis dalam 5 detik...")
 time.sleep(5)
 
@@ -64,7 +64,7 @@ for keyword in keywords:
     print("⏳ Menunggu generate (4 detik)...")
     time.sleep(4.0)
     
-    # 5. Geser hanya posisi canvas ke kanan
+    
     canvas_x += offset_x
 
 print("\n🎉 Semua keyword selesai diisi.")
